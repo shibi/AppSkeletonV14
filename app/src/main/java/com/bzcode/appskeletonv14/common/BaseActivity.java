@@ -1,6 +1,5 @@
 package com.bzcode.appskeletonv14.common;
 
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,7 +27,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseInte
 
         context = this;
 
-        progressDialog = new AppDialogs();
+        progressDialog = new AppDialogs(context);
 
         initView();
 
@@ -53,11 +52,13 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseInte
     @Override
     public void showProgress() {
         //show progress
+        progressDialog.showProgressBar();
     }
 
     @Override
     public void hideProgress() {
         //hide progress
+        progressDialog.hideProgressbar();
     }
 
 
