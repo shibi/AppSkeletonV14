@@ -5,7 +5,6 @@ import com.bzcode.appskeletonv14.utils.SharedPrefHelper;
 
 public interface BaseInterface {
 
-    int setUpLayout();
     void showToast(String msg);
     void log(String msg);
     void showProgress();

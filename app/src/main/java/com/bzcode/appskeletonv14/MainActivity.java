@@ -1,20 +1,26 @@
 package com.bzcode.appskeletonv14;
 
+import android.view.LayoutInflater;
+
 import com.bzcode.appskeletonv14.common.BaseActivity;
+import com.bzcode.appskeletonv14.databinding.ActivityMainBinding;
+import com.bzcode.appskeletonv14.databinding.LoginFragmentBinding;
 
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity<ActivityMainBinding> {
+
 
     @Override
-    public int setUpLayout() {
-        return R.layout.activity_main;
+    protected ActivityMainBinding bindView(LayoutInflater inflater) {
+        return ActivityMainBinding.inflate(inflater);
+
     }
 
     @Override
     protected void initView() {
 
+
         //redirectTo(MainActivity.class , true);
-        showToast("fkgh");
 
     }
 }
