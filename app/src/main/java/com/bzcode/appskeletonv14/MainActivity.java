@@ -14,6 +14,7 @@ public class MainActivity extends BaseActivity {
     protected void initView() {
 
         //redirectTo(MainActivity.class , true);
+        showToast("fkgh");
 
     }
 }
